@@ -100,11 +100,14 @@ class FFmpeg(object):
             else:
                 raise
 
+        """
         out = self.process.communicate(input=input_data)
         if self.process.returncode != 0:
             raise FFRuntimeError(self.cmd, self.process.returncode, out[0], out[1])
 
         return out
+        """
+        return
 
 
 class FFprobe(FFmpeg):
